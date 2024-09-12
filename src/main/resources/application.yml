@@ -1,3 +1,7 @@
 spring:
   application:
     name: qik
+qik:
+  config:
+    services:
+      products: ${PRODUCTS_URI:http://localhost:8081}
