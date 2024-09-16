@@ -1,7 +1,7 @@
 package com.oxd.qik.client;
 
-import com.oxd.qik.dto.ProductDTO;
-import com.oxd.qik.dto.ProductResumeDTO;
+import com.oxd.qik.dto.ProductResponse;
+import com.oxd.qik.dto.ProductResume;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;
@@ -12,8 +12,8 @@ import java.util.List;
 public interface ProductsClient {
 
     @GetExchange()
-    List<ProductResumeDTO> getProducts();
+    List<ProductResume> getProducts();
 
     @GetExchange("/{id}")
-    ProductDTO getProductById(@PathVariable String id);
+    ProductResponse getProductById(@PathVariable String id);
 }
