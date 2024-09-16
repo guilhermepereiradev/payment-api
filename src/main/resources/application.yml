@@ -1,6 +1,8 @@
 spring:
   application:
     name: qik
+  datasource:
+    url: jdbc:h2:mem:payments-db
 qik:
   config:
     services:
